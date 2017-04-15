@@ -1,0 +1,44 @@
+@import url("banner.css");
+@import url("footer.css");
+
+.bg-blue {
+	background: #EE6C4D;
+	color: white;
+}
+
+.padded {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+
+#newsletter {
+	padding: 120px 0;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+#map {
+	padding: 300px;
+}
+
+h1, h2 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #141414;
+}
+.card{
+  padding: 10px;
+  font-weight: 300;
+}
+.card h2{
+  font-size: 25px;
+}

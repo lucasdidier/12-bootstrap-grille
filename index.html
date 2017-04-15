@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jetpack</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="stylesheets/home.css">
+
+  </head>
+  <body>
+
+    <div id="banner">
+      <h1>Jetpack</h1>
+      <p>
+        Fulfill mankind's greatest dream <br>
+        Enjoy the freedom of ruling the skies...
+      </p>
+
+      <a href="#" class="btn btn-primary btn-lg">GET YOUR JETPACK</a>
+    </div>
+
+    <div class="bg-blue padded">
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div id="escape" class="card">
+              <img src="images/man_jetpack.svg" alt="Jetpack Man">
+              <h2>Escape the crowd</h2>
+              <p>
+                Tired of the urban buzz? Late for an appointment? Just <strong>leave at a glance</strong>.
+              </p>
+             </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div id="land" class="card">
+              <img src="images/pin_map.svg" alt="Map">
+              <h2>Land anywhere</h2>
+              <p>
+                No more parking or commuting constraints. <strong>You pick your destination</strong>, that's where you land.
+              </p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div id="rocket" class="card">
+              <img src="images/rocket_electric.svg" alt="">
+              <h2>It's all electric</h2>
+              <p>
+                Just plug your jetpack at the closest facility. <strong>Solar battery included</strong>: daylight will also be your ally.
+              </p>
+            </div>        
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div id="bird" class="card">
+              <img src="images/tweeting_bird.svg" alt="">
+              <h2>Make new friends</h2>
+              <p>
+                Up in the air, you'll see new horizons and <strong>enjoy unexpected company</strong>. Careful though, some might see you as a new rival.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div id="newsletter">
+      <h2>Get news from us</h2>
+      <p>Leave us your mail and get jetpack news</p>
+      <form action="" class="form-inline">
+        <input type="email" class="form-control" placeholder="write your email">
+        <input type="submit" value="Subscribe" class="btn btn-success">
+      </form>
+    </div>
+
+    <div id="map" style="width: 100%; height: 400px;"></div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script type="text/javascript">
+      var myLatlng = new google.maps.LatLng(48.8830481,2.3483225);
+
+      var myOptions = {
+        zoom: 16,
+        center: myLatlng,
+        scrollwheel: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: [
+      {
+          "featureType": "all",
+          "stylers": [
+              {
+                  "saturation": 0
+              },
+              {
+                  "hue": "#e7ecf0"
+              }
+          ]
+      },
+      {
+          "featureType": "road",
+          "stylers": [
+              {
+                  "saturation": -70
+              }
+          ]
+      },
+      {
+          "featureType": "transit",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "poi",
+          "stylers": [
+              {
+                  "visibility": "off"
+              }
+          ]
+      },
+      {
+          "featureType": "water",
+          "stylers": [
+              {
+                  "visibility": "simplified"
+              },
+              {
+                  "saturation": -60
+              }
+          ]
+      }
+      ]
+      };
+
+      var map = new google.maps.Map(document.getElementById('map'), myOptions);
+      var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: "You are here!"
+      });
+    </script>
+
+    <div id="footer">
+      <ul class="list-inline">
+        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+        <li><a href=""><i class="fa fa-github"></i></a></li>
+        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+
+
+    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+#footer {
+	background: rgb(30, 30, 30);
+	color: white;
+	padding: 50px 20px;
+}
+
+#footer a {
+	font-size: 30px;
+	color: grey;
+}
